@@ -71,9 +71,7 @@ public class day2 {
             }
             System.out.println(sum);
 
-        } catch (
-
-        Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
