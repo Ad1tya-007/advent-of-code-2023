@@ -63,7 +63,9 @@ public class day13 {
                     }
 
                 }
-                System.out.println(ans);
+                String msg = part2 ? "Part2: " : "Part1: ";
+
+                System.out.println(msg + "" + ans);
             }
 
         } catch (

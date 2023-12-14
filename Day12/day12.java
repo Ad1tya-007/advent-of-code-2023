@@ -51,7 +51,9 @@ public class day12 {
 
                     ans += getScore(dots, blocks, 0, 0, 0);
                 }
-                System.out.println("ans:" + ans);
+                String msg = part2 ? "Part2: " : "Part1: ";
+
+                System.out.println(msg + "" + ans);
             }
 
         } catch (Exception e) {
