@@ -18,24 +18,28 @@ public class day9 {
 
         try {
 
-            int sum = 0;
-            BufferedReader br = new BufferedReader(new FileReader("Day9/input.txt"));
-            for (String line : br.lines().toList()) {
-                // for (String line : text.split("\n")) {
-                String[] numbers = line.split(" ");
-                List<Integer> values = new ArrayList<>();
-                for (String number : numbers) {
-                    values.add(Integer.parseInt(number));
+            for (boolean part2 : new boolean[] { false, true }) {
+                int sum = 0;
+                BufferedReader br = new BufferedReader(new FileReader("Day9/input.txt"));
+                for (String line : br.lines().toList()) {
+                    // for (String line : text.split("\n")) {
+                    String[] numbers = line.split(" ");
+                    List<Integer> values = new ArrayList<>();
+                    for (String number : numbers) {
+                        values.add(Integer.parseInt(number));
+                    }
+                    if (!part2) {
+                        int nextNum = values.get(values.size() - 1) + getNextNumberAddition(values);
+                        sum += nextNum;
+                    } else {
+                        int prevNum = values.get(0) - getPrevNumberAddition(values);
+                        sum += prevNum;
+                    }
                 }
-                // System.out.println(values);
-                // int nextNum = values.get(values.size() - 1) + getNextNumberAddition(values);
-                // System.out.println(nextNum);
-                // sum += nextNum;
-                int prevNum = values.get(0) - getPrevNumberAddition(values);
-                // System.out.println(prevNum);
-                sum += prevNum;
+                String msg = part2 ? "Part2: " : "Part1: ";
+
+                System.out.println(msg + "" + sum);
             }
-            System.out.println(sum);
 
         } catch (Exception e) {
             e.printStackTrace();
