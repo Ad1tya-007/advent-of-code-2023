@@ -6,4 +6,4 @@ This was my first time taking part in AOC and I came 6th in the Computing Scienc
 
 ## Additional
 
-I deleted the local branch before uploading the solutions for day 19-25. I will upload the solutions when I get the time.
+I deleted the local branch so I couldnt upload the solutions for day 19-25. I will upload the solutions when I get the time.
